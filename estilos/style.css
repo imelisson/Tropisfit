@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
 @font-face {
     font-family:scriptdois;
-    src: url('../fontes/Lovelo\ Line\ Light.otf') format(opentype);
+    src: url("../fontes/Lovelo/Commercial/TTF/Lovelo-Black.ttf") format('truetype')
 }
-
-@font-face {
-    font-family:scriptdois;
-    src: url('../fontes/Lovelo\ Line\ Light.otf') format(opentype);
-}
-
-
 
 @font-face {
     font-family:script;
     src: url('../fontes/Gymkhana\ Lt.otf')format('opentype');font-weight: normal;font-style: normal;
 }
+
+
 
 /*  
                COLLORS 
@@ -47,12 +49,12 @@ body { height: 400vh; width: 99vw; }
 
 #promopix { color: white; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: .8em; font-weight: bold; font-variant:small-caps;}
 
-#header { display: flex; justify-content: space-between;  background-color: aliceblue;position: fixed; width:100%; top: 30px; align-items: center; flex:0 1 500px; padding: 0 13vw ; transition: 1s; }
+#header { display: flex; justify-content: space-between;  background-color: aliceblue; position: fixed; width:100%; top: 30px; align-items: center; flex:0 1 500px; padding: 0 13vw ; transition: 1s; z-index: 9; }
 
 
 #header.rolagem {
 
-    background-color: aliceblue; top: 0; padding:  0 10vw 0 8vw ;
+    background-color: aliceblue; top: 0; padding:  0 10vw 0 8vw ; margin-top: -10px;
 }
 
 
@@ -89,11 +91,17 @@ body { height: 400vh; width: 99vw; }
 
 #carrinho{  }
 
+
+
 #iconecarrinho { height: 60px; width: 50px;}
+
+
 
 #carrinho a { font-family: Arial, Helvetica, sans-serif; color: #1D2C33; font-weight: 700; text-decoration: none;}
 
-.slider { background-image: url('../imagens/fefdk2.png'); margin: 150px auto 0; width: 80%; height: 500px; overflow: hidden; box-shadow: 0px 1px 4px black;}
+#carrinho a:hover { }
+
+.slider { background-image: url('../imagens/fefdk2.png'); margin: 150px auto 0; width: 100%; height: 600px; overflow: hidden; box-shadow: 0px 1px 4px black;}
 
 .slides { width: 400%; height: 400px; display: flex;}
 
@@ -105,7 +113,7 @@ body { height: 400vh; width: 99vw; }
 
 .manual-navigation { position: absolute ; width: 100%; margin-top: 70px; display: flex ; justify-content: center; left: -1%;}
 
-.manual-btn { border: 2px solid white; padding: 8px; border-radius: 50%; cursor: pointer; transition: 1s;}
+.manual-btn { border: 2px solid white; padding: 6px; border-radius: 50%; cursor: pointer; transition: 1s;}
 
 .manual-btn:not(:last-child) { margin-right: 20px;}
 
@@ -114,9 +122,9 @@ body { height: 400vh; width: 99vw; }
 #radio1:checked ~ .first { margin: 0;}
 #radio2:checked ~ .first { margin: -12.5%;}
 #radio3:checked ~ .first { margin: -25%;} 
-#radio4:checked ~ .first { margin: -38%;}
+#radio4:checked ~ .first { margin: -37.5%;}
 
-.navigation-auto  div{ border: 2px solid white;  padding:8px; border-radius: 50%; cursor: pointer; transition: 1s;}
+.navigation-auto  div{ border: 2px solid white;  padding:6px; border-radius: 50%; cursor: pointer; transition: 1s;}
 
 .navigation-auto {
 
@@ -130,8 +138,74 @@ body { height: 400vh; width: 99vw; }
 #radio3:checked ~ .navigation-auto .auto-btn3 { background-color: white;}
 #radio4:checked ~ .navigation-auto .auto-btn4 { background-color: white;}
 
-.painel1 { width: 100%; height: 700px; margin-top: 50px; background-color: #FFD679; color: white; font-family: scriptdois;}  
+.painel1 { width: 100%; height: 700px; margin-top: 50px; background-color: #9e679c; color: white; font-family: scriptdois, Arial, Helvetica, sans-serif; display: flex; justify-content: center; align-items: center; outline: 5px solid 2; position: relative; outline: #FA9A07 solid 2px; background-image: url('../imagens/pexels-vanessa-loring-5965950.jpg'); background-size: cover; overflow: hidden;} 
 
 
 
-.textp1 { width: 30%; text-align: center; background-color: chocolate;}
+.imagembatata { width: 25%; margin-top: 0px; border-radius: 10%; outline: 2px solid #ffe2bc ;}
+
+
+.textp1 { width: 30vw; text-align: center;; padding: 30px; color: white; margin-top: 0px; ; border-radius: 10%;  }
+
+.textp1 > h1 { font-family: scriptdois; color:#ffe2bc; font-size: 3em; }
+
+
+.textp1 >p { text-align: justify; line-height: 28px; margin-top: 40px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1em; }
+
+.buttonp1 { padding: 20px; border-radius: 15%; border: none; background-color:  #DA917B; font-size: 1.5em; font-family: scriptdois, Arial, Helvetica, sans-serif; color:  white; outline: 2px solid #FFE2BC; transition: all.4s; cursor: pointer; margin-top: 50px; position: relative;}
+
+.buttonp1:hover { background-color: #509C21; color:#FFE2BC; ; transition-delay: .2s;  }
+
+.folha { position: absolute; top: 75%; left: 70%; width: 8%; border:  #ffe2bc solid 3px; border-radius: 57%;}
+
+.efeitotxt,.efeitoimg { visibility: hidden;}
+
+/* FIM PAINEL 1 */
+
+
+.painel2 { width: 100%; height: 700px; margin-top: 50px; background-color: #9e679c; color: white; font-family: scriptdois, Arial, Helvetica, sans-serif; display: flex; justify-content: center; align-items: center; outline: 5px solid 2; position: relative; outline: #FA9A07 solid 2px; background-image: url('../imagens/pexels-vanessa2-loring-596595022.jpg'); background-size: cover; overflow: hidden;} 
+
+.juli2 { display: flex; justify-content: center; width: 90%; }
+
+.imagembatata2 { width: 25%; margin-top: 0px; border-radius: 5%; outline: 2px solid #ffe2bc ;}
+
+
+.textp2 { width: 30vw; text-align: center;; padding: 30px; color: white; margin-top: 0px; ; border-radius: 10%;  }
+
+.textp2 > h1 { font-family: scriptdois; color:#ffe2bc; font-size: 3em; }
+
+
+.textp2 >p { text-align: justify; line-height: 28px; margin-top: 40px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 1em; }
+
+.buttonp2 { padding: 20px; border-radius: 15%; border: none; background-color:  #8D4F3A; font-size: 1.5em; font-family: scriptdois, Arial, Helvetica, sans-serif; color:  white; outline: 2px solid #FFE2BC; transition: all.4s; cursor: pointer; margin-top: 50px; position: relative;}
+
+.buttonp2:hover { background-color: #509C21; color:#FFE2BC; ; transition-delay: .2s;  }
+
+.folha { position: absolute; top: 75%; left: 70%; width: 8%; border:  #ffe2bc solid 3px; border-radius: 57%;}
+
+.sorvic {position: absolute; width: 20%; left: 5%; top: 49.5%; }
+
+/* FIM PAINEL 2 */
+
+.painel3 { width: 100%; height: 700px; margin-top: 50px; background-color: #009C6F; color: white; font-family: scriptdois, Arial, Helvetica, sans-serif; display: flex; justify-content: center; align-items: center; outline: 5px solid 2; position: relative; outline: #FA9A07 solid 2px; background-image: url('../imagens/istockphoto-1301376965-2048x2048.jpg'); background-size: contain;} 
+
+
+
+.imagembatata3 { width: 45%; margin-top: 0px; border-radius: 5%; outline: 2px solid #ffe2bc ;}
+
+
+.textp3 { width: 30vw; text-align: center;; padding: 30px; color: white; margin-top: 0px; ; border-radius: 10%; background: rgba(0, 0, 0, 0.644);  }
+
+.textp3 > h1 { font-family: scriptdois; color:#ffe2bc; font-size: 3em; }
+
+
+.textp3 >p { text-align: left; line-height: 28px; margin-top: 40px; font-family: scriptdois; font-size: 1.5em; }
+
+.buttonp3 { padding: 20px; border-radius: 15%; border: none; background-color:  #8D4F3A; font-size: 1.5em; font-family: scriptdois, Arial, Helvetica, sans-serif; color:  white; outline: 2px solid #FFE2BC; transition: all.4s; cursor: pointer; margin-top: 50px; position: relative;}
+
+.buttonp3:hover { background-color: #509C21; color:#FFE2BC; ; transition-delay: .2s;  }
+
+.folha3 { position: absolute; top: 70%; left: 15%; width: 10%; border:  #ffe2bc solid 3px; border-radius: 57%;}
+
+
+.juli3 { display: flex; justify-content: center; }
